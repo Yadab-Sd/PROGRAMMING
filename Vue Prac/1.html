@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="whole">
+        <h1 v-on:click="al">
+           Name: {{name}}<br>
+           <span v-if="isTrue">Password : {{pass}}</span><br>
+           Picture: <br><img :src="pic" alt="Yadab" style="display:block;"> <!-- or use v-bind:src='' -->
+            <ul>
+                <li v-for="i in AllHobby">{{ i }}</li>
+            </ul>
+        </h1>
+        <input type="text" v-model="change_instant" />
+        <input type="text" :value="change_instant" />
+        <input type="text" @change="show" value="red" v-model="Color" :style="{color: Color}" placeholder="Enter a Color's name"/>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var hobby = ["Fishing","Painting","Chess"];
+        var f = new Vue({
+            el: "#whole",
+            data: {
+                name: "Yadab",
+                pass: "Yadab123",
+                pic: 'http://yadab.us/assets/images/pic.jpg',
+                isTrue: true,
+                AllHobby: hobby,
+                change_instant: "initial",
+                Color: "",
+                para: ""
+            },
+            methods: {
+                al: function(){
+                    f.isTrue= false
+                },
+                show: function(){
+                    alert(this.Color);
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
