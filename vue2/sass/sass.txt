@@ -1,0 +1,13 @@
+https://www.w3schools.com/sass/sass_installation.asp
+https://sass-lang.com/install
+
+Three ways are easy to install: --
+1. npm install -g sass (Need Node.js to be pre-installed)
+2. https://github.com/sass/dart-sass/releases/tag/1.22.12 --- is ready made, just link location to the  path
+3. Installer provided for free Scout-App
+
+
+run: cmd
+SASS --watch sass/style.scss:style.css
+or sass input.scss style.css
+or sass input.scss:style.css
